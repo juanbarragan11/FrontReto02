@@ -8,7 +8,7 @@ function iniciarSesion() {
         validarEmail();
         $.ajax({
             url:
-            "http://localhost:8081/api/user/" +$("#emailuser").val() +"/" +$("#passworduser").val(),
+            "http://129.151.112.156:8081/api/user/" +$("#emailuser").val() +"/" +$("#passworduser").val(),
             type: "GET",
             dataType: "json",
             success: function (respuesta) {

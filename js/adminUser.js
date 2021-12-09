@@ -20,7 +20,7 @@ function saveUser(){
     if (validateUser(userAd)){
         if (emailRegex.test($("#idEmail").val())){   
         $.ajax({
-            url: "http://localhost:8081/api/user/new",
+            url: "http://129.151.112.156:8081/api/user/new",
             type: 'POST',
             dataType: 'json',
             headers: {
@@ -43,7 +43,7 @@ function saveUser(){
 
 function allUsers(){
     $.ajax({
-        url: "http://localhost:8081/api/user/all",
+        url: "http://129.151.112.156:8081/api/user/all",
         type: 'GET',
         dataType: 'json',
         success: function(respuesta){
@@ -102,7 +102,7 @@ function updateUser2() {
 
 function removeUser(id){
     $.ajax({
-        url: "http://localhost:8081/api/user/"+id,
+        url: "http://129.151.112.156:8081/api/user/"+id,
         type: 'DELETE',
         dataType: 'json',
         contentType: "application/json",

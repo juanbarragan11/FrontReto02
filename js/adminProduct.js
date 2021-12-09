@@ -15,7 +15,7 @@ function saveProduct(){
     console.log(product1);
     if (validateProduct(product1)){  
         $.ajax({
-            url: "http://localhost:8081/api/chocolate/new",
+            url: "http://129.151.112.156:8081/api/chocolate/new",
             type: 'POST',
             dataType: 'json',
             headers: {
@@ -38,7 +38,7 @@ function saveProduct(){
 
 function allProducts(){
     $.ajax({
-        url: "http://localhost:8081/api/chocolate/all",
+        url: "http://129.151.112.156:8081/api/chocolate/all",
         type: 'GET',
         dataType: 'json',
         success: function(respuesta){
@@ -93,7 +93,7 @@ function updateProduct() {
 
 function removeUser(reference){
     $.ajax({
-        url: "http://localhost:8081/api/chocolate/"+reference,
+        url: "http://129.151.112.156:8081/api/chocolate/"+reference,
         type: 'DELETE',
         dataType: 'json',
         contentType: "application/json",
