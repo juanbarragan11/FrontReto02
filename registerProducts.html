@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="/css/navstyles.css">
+    <script src="js/adminProduct.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+</head>
+
+<body class="mx-auto">
+    <header class="header">
+        <div class="logo-header">
+            <img src="assets/img/logos/logo3.png" alt="">
+        </div>
+        <nav class="nav-menu">
+            <ul>
+                <li> <a class="btn-sm" href="inicio.html">Pagina inicio</a>
+                <li> <a class="btn-sm" href="cierreSesion.html">Cerrar Sesion</a>
+               </ul>
+        </nav>
+    </header>
+
+    <br>
+    <div class="container">
+        <div class="container text-center">
+            <h3>Bienvenido Administrador</h3>
+        </div>
+
+        <div class="container">
+        <form>
+                <h5>Registro de Productos</h5>
+
+            <div class="row">
+
+                    <div class="col-md-6 mb-3">
+                        <label for="product_reference" class="form-label">Referencia</label>
+                        <input type="text" id="idReference" class="form-control" placeholder="Referencia">
+                    </div>
+    
+                    <div class="col-md-6 mb-3">
+                        <label for="product_category" class="form-label">Categoria</label>
+                        <input type="text" id="idCategory" class="form-control" placeholder="Categoria">
+                    </div>
+    
+            </div>
+
+            
+
+            <div class="row">
+
+                    <div class="col-md-8 mb-3">
+                        <label for="product_description" class="form-label">Descripcion</label>
+                        <input type="text" id="idDescription" class="form-control" placeholder="Descripcion">
+                    </div>
+
+                    <div class="col-md-4 mb-3">
+                        <label for="idAvailability">Disponibilidad</label>
+                        <select id="idAvailability" class="form-control">
+                            <option>Seleccionar Disponibilidad</option>
+                            <option value="true">Disponible</option>
+                            <option value="false">No Disponible</option>
+                        </select>
+                    </div>
+
+            </div>
+
+            <div class="row">
+                
+                <div class="col-md-4 mb-3">
+                  <label for="product_price" class="form-label">Precio</label>
+                  <input type="number" id="idPrice" class="form-control" placeholder="Precio">
+                </div>
+
+                <div class="col-md-4 mb-3">
+                    <label for="product_quantity" class="form-label">Cantidad</label>
+                    <input type="number" id="idQuantity" class="form-control" placeholder="Cantidad">
+                </div>
+
+                <div class="col-md-4 mb-3">
+                    <label for="product_url" class="form-label">URL Fotografia</label>
+                    <input type="url" id="idUrl" class="form-control" placeholder="URL Fotografia">
+                </div>
+    
+            </div>
+
+            
+            <div id="btn-group" class="mb-3 ">
+                <button class="btn btn-success" type="button" onclick="saveProduct()">
+                  Agregar/Editar Producto
+                </button>
+            </div>
+
+
+        </form>
+
+        <hr width=1095>
+
+        <div class="mb-3 ">
+            <button class="btn btn-info" type="button" onclick="allProducts()">
+              Listar Productos
+            </button>
+        </div>
+
+        <div id="listProductsAll"></div>
+    </div>
+
+    <style>
+        table,
+        
+        th {
+          color: rgb(255, 255, 255);
+          background-color: #11b392;
+          border:  1px solid #ffffff;
+          margin: 20px 0;
+          font-size: 1.20em;
+          min-width: 100px;
+          text-align: center;
+        }
+  
+       
+  
+        td {
+          color: rgba(8, 8, 8, 0.7);
+  
+          margin-top: 0px;
+          margin-left: -1px;
+          /*50% del ancho */
+          text-align: center;
+          /*  border: 3px solid #cad1df;*/
+          border-collapse: collapse;
+          margin: 10px 0;
+          font-size: 1.20em;
+          font-family: 'Lato', sans-serif;
+          min-width: 100px;
+       
+  
+          box-shadow: 0 0 0px rgb(151, 19, 19);
+          padding: 10px 12px;
+          /*  border-bottom: 3px solid #cce4e1; /*color bordes horizontales*/
+          background-color: #ffffff;
+        }
+      </style>
+</body>
+</html>

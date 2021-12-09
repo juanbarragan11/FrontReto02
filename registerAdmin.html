@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro Usuarios</title>
+    <script src="js/adminUser.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="/css/navstyles.css">
+</head>
+<body class="mx-auto">
+  <header class="header">
+    <div class="logo-header">
+        <img src="assets/img/logos/logo3.png" alt="">
+    </div>
+    <nav class="nav-menu">
+        <ul>
+            <li> <a class="btn-sm" href="inicio.html">Pagina inicio</a>
+            <li> <a class="btn-sm" href="cierreSesion.html">Cerrar Sesion</a>
+           </ul>
+    </nav>
+</header>
+    <br>
+    <div class="container">
+        <div class="container text-center">
+            <h3>Bienvenido Administrador</h3>
+        </div>
+        <div class="container">
+            <form>
+                <h5>Registro de Usuarios</h5>
+
+                <div class="row">
+                    <div class="col-md-3 mb-3">
+                      <label for="user_id" class="form-label">ID</label>
+                      <input type="number" id="idUser" class="form-control" placeholder="ID">
+                    </div>
+        
+                    <div class="col-md-4 mb-3">
+                      <label for="user_identification" class="form-label">Identificacion</label>
+                      <input type="text" id="idIdentification" class="form-control" placeholder="Identificacion">
+                    </div>
+        
+                    <div class="col-md-5 mb-3">
+                      <label for="user_namec" class="form-label">Nombre</label>
+                      <input type="text" id="idUserName" class="form-control" placeholder="Nombre">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-7 mb-3">
+                      <label for="user_address" class="form-label">Direccion</label>
+                      <input type="text" id="idAddress" class="form-control" placeholder="Direccion">
+                    </div>
+        
+                    <div class="col-md-5 mb-3">
+                      <label for="user_number" class="form-label">Celular</label>
+                      <input type="number" id="idNumber" class="form-control" placeholder="Celular">
+                    </div>
+        
+                </div>
+
+                <div class="row">
+                    <div class="col-md-7 mb-3">
+                      <label for="user_email" class="form-label">Email</label>
+                      <input type="email" id="idEmail" class="form-control" placeholder="Email">
+                    </div>
+        
+                    <div class="col-md-5 mb-3">
+                      <label for="user_password" class="form-label">Contraseña</label>
+                      <input type="password" id="idPassword" class="form-control" placeholder="Contraseña">
+                </div>
+
+
+                <div class="row">
+                    <div class="col-md-4 mb-3">
+                        <label for="idZone">Zona</label>
+                        <select id="idZone" class="form-control">
+                          <option selected>Seleccionar Zona</option>
+                          <option value="ZONA 1">ZONA 1</option>
+                          <option value="ZONA 2">ZONA 2</option>
+                        </select>
+                    </div>
+        
+                    <div class="col-md-4 mb-3">
+                        <label for="idType">Tipo</label>
+                        <select id="idType" class="form-control">
+                          <option selected>Seleccionar Tipo</option>
+                          <option value="COOR">COOR</option>
+                          <option value="ASESOR">ASESOR</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div id="btn-group" class="mb-3 ">
+                    <button class="btn btn-success" type="button" onclick="saveUser()">
+                      Agregar/Editar Usuario
+                    </button>
+                </div>
+
+
+    
+              </form>
+              <br>
+
+            <hr width=1095>
+
+          <div class="design">
+            <div class="mb-3 ">
+                <button class="btn btn-info" type="button" onclick="allUsers()">
+                  Listar Usuarios
+                </button>
+            </div>
+          </div>
+
+            <div id="listUsersAll"></div>
+
+        </div>
+    </div>
+    <script src="js/adminUser.js"></script>
+
+    <style>
+      table,
+      
+      th {
+        color: rgb(255, 255, 255);
+        background-color: #11b392;
+        border:  1px solid #ffffff;
+        margin: 20px 0;
+        font-size: 1.20em;
+        min-width: 100px;
+        text-align: center;
+      }
+
+     
+
+      td {
+        color: rgba(8, 8, 8, 0.7);
+
+        margin-top: 0px;
+        margin-left: -1px;
+        /*50% del ancho */
+        text-align: center;
+        /*  border: 3px solid #cad1df;*/
+        border-collapse: collapse;
+        margin: 10px 0;
+        font-size: 1.20em;
+        font-family: 'Lato', sans-serif;
+        min-width: 100px;
+     
+
+        box-shadow: 0 0 0px rgb(151, 19, 19);
+        padding: 10px 12px;
+        /*  border-bottom: 3px solid #cce4e1; /*color bordes horizontales*/
+        background-color: #ffffff;
+      }
+    </style>
+
+</body>
+</html>

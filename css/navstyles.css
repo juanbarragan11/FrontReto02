@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;1,300&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+a, li{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif,
+    sans-serif;
+    color: rgb(103, 32, 121);
+}
+
+.logo-header{
+    width: 50px;
+}
+
+header{
+    background-color:rgb(255, 187, 0);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 2rem;
+}
+
+.nav-menu ul{
+    display: flex;
+    align-items: center;
+}
+
+.nav-menu li{
+    margin-right: 1.5rem;
+}
+.nav-menu a:hover{
+    color: gold;
+}
+
+.nav-menu li:last-child{
+    background-color: rgb(43, 213, 255);
+    border: 2px solid rgb(43, 213, 255);
+    padding: .25rem .75rem;
+    border-radius: .2rem;
+}
